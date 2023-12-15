@@ -8,6 +8,7 @@ tags:
  - lab
  - netpol
  - NetworkPolicy
+ - network
 ---
 
 # Network Policy Demo
