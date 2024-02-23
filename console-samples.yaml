@@ -94,3 +94,32 @@ spec:
               kubernetes.io/metadata.name: burns
       policyTypes:
       - Ingress
+---
+kind: ConsoleYAMLSample
+apiVersion: console.openshift.io/v1
+metadata:
+  name: netpol-demo-simpon-allow-from-bouviers-to-marge
+spec:
+  targetResource:
+    apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+  description: |
+      Simpon Demo - Allow from Bouviers to Marge
+  title: Simpon Demo - Allow from Bouviers to Marge
+  yaml: |
+    apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    metadata:
+      name: allow-from-bouviers-to-marge
+      namespace: simpson
+    spec:
+      podSelector:
+        matchLabels:
+          deployment: marge
+      ingress:
+      - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: bouvier
+      policyTypes:
+      - Ingress
