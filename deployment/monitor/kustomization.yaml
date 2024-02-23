@@ -9,3 +9,6 @@ resources:
   - clusterrole.yaml
   - rolebinding.yaml
   - deployment.yaml
+  - configmap-netpol-monitor-html.yaml
+  - route.yaml
+  - service.yaml
