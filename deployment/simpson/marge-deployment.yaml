@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - image: quay.io/openshift-examples/simple-http-server:micro
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         name: http-server
         ports:
         - containerPort: 8080
